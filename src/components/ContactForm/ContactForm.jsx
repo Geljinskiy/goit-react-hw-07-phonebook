@@ -14,7 +14,7 @@ const ContactForm = () => {
   const [number, setNumber] = useState('');
 
   const dispatch = useDispatch();
-  const { contacts } = useSelector(getContacts);
+  const contacts = useSelector(getContacts);
 
   const onInput = ev => {
     const input = ev.currentTarget;

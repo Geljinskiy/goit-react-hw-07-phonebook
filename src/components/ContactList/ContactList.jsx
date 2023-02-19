@@ -8,9 +8,8 @@ import css from './ContactList.module.css';
 
 const ContactList = () => {
   const dispatch = useDispatch();
-  const {contacts} = useSelector(getContacts);
+  const contacts = useSelector(getContacts);
   const filter = useSelector(getFilter);
-
 
   const getVisibleContacts = () => {
     const regNormolize = sentence => {
