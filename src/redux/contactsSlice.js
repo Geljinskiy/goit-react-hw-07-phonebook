@@ -33,18 +33,19 @@ export const contactsSlice = createSlice({
       state.error = null;
       state.items = action.payload;
     },
-    
+
     [addContact.fulfilled](state, action) {
       state.isLoading = false;
       state.error = null;
       state.items.push(action.payload);
-      console.log('action.payload :', action.payload);
     },
-    
+
     [deleteContact.fulfilled](state, action) {
       state.isLoading = false;
       state.error = null;
-      const index = state.items.findIndex(task => task.id === action.payload);
+      const index = state.items.findIndex(
+        task => task.id === action.payload.id
+      );
       state.items.splice(index, 1);
     },
   },

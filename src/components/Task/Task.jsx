@@ -10,7 +10,6 @@ const Task = ({ task }) => {
   const dispatch = useDispatch();
 
   const onDelete = () => {
-    console.log('id :', id);
     dispatch(deleteContact(id));
   };
 
