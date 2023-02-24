@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 
 // import { addContact } from 'redux/contactsSlice';
 import { addContact } from 'redux/operations.js';
-import { getContacts } from 'redux/selectors';
+import { selectContacts } from 'redux/selectors';
 
 import MainButtonStyle from 'components/Common/styled-components/MainButton';
 import Label from 'components/Common/styled-components/Label';
@@ -15,7 +15,7 @@ const ContactForm = () => {
   const [phone, setPhone] = useState('');
 
   const dispatch = useDispatch();
-  const contacts = useSelector(getContacts);
+  const contacts = useSelector(selectContacts);
 
   const onInput = ev => {
     const input = ev.currentTarget;

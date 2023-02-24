@@ -1,12 +1,12 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { getFilter } from 'redux/selectors';
+import { selectFilter } from 'redux/selectors';
 import { changeFilter } from 'redux/filtersSlice';
 
 import Label from 'components/Common/styled-components/Label';
 
 const Filter = () => {
   const dispatch = useDispatch();
-  const filter = useSelector(getFilter);
+  const filter = useSelector(selectFilter);
 
   const onFilter = ev => {
     dispatch(changeFilter(ev.currentTarget.value));
