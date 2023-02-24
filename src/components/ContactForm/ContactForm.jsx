@@ -2,7 +2,6 @@ import React from 'react';
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
-// import { addContact } from 'redux/contactsSlice';
 import { addContact } from 'redux/operations.js';
 import { selectContacts } from 'redux/selectors';
 

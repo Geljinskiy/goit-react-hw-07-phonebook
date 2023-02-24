@@ -10,8 +10,6 @@ export const selectFilter = state => state.filter;
 export const selectVisibleContacts = createSelector(
   [selectContacts, selectFilter],
   (contacts, filter) => {
-    console.log('calcuating');
-
     const regNormolize = sentence => {
       return sentence.toLowerCase().trim();
     };
