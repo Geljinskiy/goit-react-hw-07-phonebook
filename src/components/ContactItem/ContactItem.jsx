@@ -1,11 +1,11 @@
 import { useDispatch } from 'react-redux';
 import { deleteContact } from 'redux/operations';
 
-import css from './Task.module.css';
+import css from './ContactItem.module.css';
 import MainButtonStyle from 'components/Common/styled-components/MainButton/MainButton';
 
-const Task = ({ task }) => {
-  const { id, name, phone } = task;
+const ContactItem = ({ contact }) => {
+  const { id, name, phone } = contact;
 
   const dispatch = useDispatch();
 
@@ -25,4 +25,4 @@ const Task = ({ task }) => {
   );
 };
 
-export default Task;
+export default ContactItem;
